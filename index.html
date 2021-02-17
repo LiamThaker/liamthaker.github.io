@@ -10,226 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Merriweather:300|Source+Sans+Pro:200,400,600');
-
-        :root {
-            /*
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-*/
-            /* Override Variables */
-            --font-family-sans-serif: 'Source Sans Pro', -apple-system,
-                BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-                Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-                'Segoe UI Symbol';
-            --gray-dark: #404040;
-            --purple: #533777;
-
-            /* Page Variables */
-            --light-blue: #e1f7f5;
-            --light-purple: #c290d2;
-            --font-family-serif: Merriweather, serif;
-            --color-text: var(--gray-dark);
-            --font-family-text: var(--font-family-serif);
-        }
-
-        .family-sans {
-            font-family: var(--font-family-sans-serif);
-        }
-
-        .icon {
-            display: inline-block;
-            font-size: inherit;
-            overflow: visible;
-            vertical-align: -0.125;
-            text-rendering: auto;
-            fill: gray !important;
-            width: 50px;
-            height: 50px;
-        }
-
-        .animated {
-            visibility: visible !important;
-        }
-
-        body {
-            font-family: var(--font-family-text);
-            color: var(--color-text);
-            font-weight: 200;
-        }
-
-        .site-header {
-            /* background: url(../images/hero.svg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover; */
-            background-color: #404040;
-        }
-
-        .site-header .animated {
-            animation-delay: 2s;
-            animation-duration: 1s;
-        }
-
-        .layout-text {
-            font-size: 1.1em;
-        }
-
-        .site-nav.inbody {
-            background: var(--secondary);
-        }
-
-        @media screen and (max-width: 768px) {
-            .site-header .navbar-collapse {
-                background-color: rgba(0, 0, 0, 0.9);
-                padding: 10px;
-            }
-        }
-
-        .site-header .layout-hero {
-            min-height: 50vh;
-        }
-
-        .site-header .page-section-title {
-            font-size: 3em;
-            font-family: var(--font-family-sans-serif);
-            font-weight: 200;
-        }
-
-        .site-header .page-section-text {
-            font-size: 1.2em;
-        }
-
-        .site-header .nav-link {
-            position: relative;
-            padding-bottom: 0;
-            margin-bottom: 2px;
-        }
-
-        .site-header .nav-link:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            max-width: 100px;
-            height: 2px;
-            left: 0;
-            bottom: 0;
-            background-color: var(--yellow);
-            visibility: hidden;
-            transform: scaleX(0);
-            transition: all 0.3s ease-out;
-        }
-
-        .site-header .nav-link:hover:before {
-            visibility: visible;
-            left: 0;
-            transform: scaleX(1);
-        }
-
-        #page-multicolumn {
-            background: var(--light-blue);
-        }
-
-        .layout-multicolumn .layout-image {
-            transition: all 0.3s ease-out;
-        }
-
-        .layout-multicolumn .layout-image:hover {
-            transform: scale(1.1) translateY(-3px);
-        }
-
-        .page-section-header .page-section-title {
-            font-size: 4em;
-            font-family: var(--font-family-sans-serif);
-            font-weight: 200;
-            color: var(--purple);
-        }
-
-        .page-section-header .page-section-text {
-            font-size: 1.2em;
-            font-weight: 200;
-        }
-
-        .layout-media .layout-image {
-            max-width: 200px;
-        }
-
-        .layout-media .layout-title {
-            color: var(--purple);
-            font-family: var(--font-family-sans-serif);
-            font-weight: 200;
-            font-size: 1.6em;
-        }
-
-        .layout-photogrid .layout-image {
-            background: var(--light-blue);
-        }
-
-        #page-carousel {
-            background: var(--light-purple);
-        }
-
-        .layout-nested .layout-title {
-            color: var(--purple);
-            font-family: var(--font-family-sans-serif);
-            font-size: 2.2em;
-        }
-
-        #page-floater {
-            background: var(--light-blue);
-        }
-
-        @media screen and (min-width: 768px) {
-            #page-floater {
-                margin: 150px 0 150px 0;
-            }
-
-            .layout-floater .layout-container {
-                position: relative;
-            }
-
-            .layout-floater .layout-image {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(15deg) scale(1.1);
-            }
-        }
-
-        .layout-social .layout-icon {
-            font-size: 2em;
-        }
-    </style>
-    <title>Bootstrap 4 Layouts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Liam Thaker</title>
 </head>
 
 <body data-spy="scroll" data-target=".site-nav" data-offset="55">
@@ -240,8 +22,20 @@
 
             <div class="container-fluid">
 
-                <a class="navbar-brand text-white">
-                    <i class="fas fa-user-circle"></i> Liam Thaker</a>
+                <a class="navbar-brand text-white">Liam Thaker</a>
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a target="_blank" class="text-light px-2" href="https://github.com/LiamThaker">
+                                <i class="layout-icon fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" class="text-light px-2" href="https://www.linkedin.com/in/LiamThaker">
+                                <i class="layout-icon fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                      </ul>
 
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -252,7 +46,6 @@
                         <a class="nav-item nav-link" href="#page-hero">Profile</a>
                         <a class="nav-item nav-link" href="#page-media">Experience</a>
                         <a class="nav-item nav-link" href="#page-multicolumn">Education </a>
-                        <a class="nav-item nav-link" href="#page-social">Socials</a>
                     </div>
                 </section>
 
@@ -262,8 +55,11 @@
 
         <section class="layout-hero d-flex align-items-center text-light text-center">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-11 col-sm-10 col-md-8 ">
+                <div class="row justify-content-betweem">
+                    <div class="col-4 col-sm-12 col-md-3 ">
+                        <img class="layout-image rounded-circle mr-3" src="images/profile.jpg" alt="arup" width="150" height="150">
+                    </div>
+                    <div class="col-8 col-sm-12 col-md-6 ">
                         <h3 class="page-section-title">Liam Thaker</h3>
                         <p class="page-section-text">Software Developer. I convert caffeine into code. <br /><span class="text-muted">liamthaker@hotmail.com</span></p>
                     </div>
@@ -286,7 +82,7 @@
                 <div class="col-lg-8 ">
 
                     <section class="media">
-                        <!-- <img class="layout-image" src="images/media01.gif" alt="Media Image 01"> -->
+                        <img class="layout-image mr-3" src="images/arup.jpg" alt="arup" width="100" height="100">
                         <div class="media-body">
                             <h4 class="layout-title">Arup</h4>
                             <p class="layout-text">Software developer in the Digital Services department. Primarily tasked with intuitive web
@@ -311,11 +107,11 @@
                         </div>
                     </section>
                     <section class="media">
-                        <!-- <img class="layout-image" src="images/media01.gif" alt="Media Image 01"> -->
+                        <img class="layout-image mr-3" src="images/ericsson.jpg" alt="ericsson" width="100" height="100">
                         <div class="media-body">
                             <h4 class="layout-title">Ericsson</h4>
                             <p class="layout-text">Front end developer. Part of the Customer Product Information team, the unit tasked with creating
-                                key information for Ericsson products, tutorials, help manuals, or documentation. A small team of
+                                key information for Ericsson products, tutorials, help manuals, or documentation. A small team
                                 working in an agile environment using Scrum methodology.
                                 Technologies exposed to: JavaScript, DITA, Git, Jira.
                             </p>
@@ -369,21 +165,6 @@
         </header>
     </article>
 
-    <article id="page-social">
-        <footer class="site-footer bg-secondary text-light d-flex justify-content-center">
-
-            <section class="layout-social py-5">
-                <a target="_blank" class="text-light px-2" href="https://github.com/LiamThaker">
-                    <i class="layout-icon fab fa-github"></i>
-                </a>
-                <a target="_blank" class="text-light px-2" href="https://www.linkedin.com/in/LiamThaker">
-                    <i class="layout-icon fab fa-linkedin"></i>
-                </a>
-            </section>
-
-        </footer>
-    </article>
-
     <article id="site-modal" class="modal fade">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -395,65 +176,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            var topoffset = 55;
-
-            //Use smooth scrolling when clicking on navigation
-            $('.navbar a[href*=\\#]:not([href=\\#])').click(
-                function () {
-                    if (
-                        location.pathname.replace(/^\//, '') ===
-                        this.pathname.replace(/^\//, '') &&
-                        location.hostname === this.hostname
-                    ) {
-                        var target = $(this.hash);
-                        target = target.length
-                            ? target
-                            : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate(
-                                {
-                                    scrollTop: target.offset().top - topoffset + 2
-                                },
-                                5
-                            );
-                            return false;
-                        } //target.length
-                    } //click function
-                }
-            ); //smooth scrolling
-
-            $(window).on('activate.bs.scrollspy', function () {
-                var hash = $('.site-nav')
-                    .find('a.active')
-                    .attr('href');
-
-                if (hash !== '#page-hero') {
-                    $('header nav').addClass('inbody');
-                } else {
-                    $('header nav').removeClass('inbody');
-                }
-
-                $('#page-media .layout-animation').css(
-                    'visibility: hidden'
-                );
-
-                if (hash === '#page-media') {
-                    $('#page-media .layout-animation').addClass(
-                        'animated fadeInRight'
-                    );
-                }
-            });
-
-            // $('#site-modal').on('show.bs.modal', function (event) {
-            //     $(this)
-            //         .find('.modal-content img')
-            //         .attr('src', $(event.relatedTarget).data('highres'));
-            // });
-        });
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
