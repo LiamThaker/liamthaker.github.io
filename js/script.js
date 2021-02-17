@@ -5,7 +5,7 @@ $(function () {
             .find('a.active')
             .attr('href');
 
-        if (hash !== '#page-hero') {
+        if (hash !== '#page-profile') {
             $('header nav').addClass('inbody');
         } else {
             $('header nav').removeClass('inbody');
