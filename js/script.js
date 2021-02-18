@@ -7,8 +7,11 @@ $(function () {
 
         if (hash !== '#page-profile') {
             $('header nav').addClass('inbody');
+            $('#profile-nav').removeClass('invisible');
+
         } else {
             $('header nav').removeClass('inbody');
+            $('#profile-nav').addClass('invisible');
         }
 
         $('#page-media .layout-animation').css(
